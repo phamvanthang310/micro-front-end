@@ -13,6 +13,10 @@ module.exports = {
     rules: [
       { test: /\.ts$/, loader: '@ngtools/webpack' },
       { test: /\.html$/, loader: 'html-loader' },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+      }
     ]
   },
   resolve: {
