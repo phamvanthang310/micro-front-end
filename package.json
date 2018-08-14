@@ -1,0 +1,14 @@
+{
+  "name": "micro-front-end",
+  "version": "1.0.0",
+  "description": "sample micro front-end project using project mosaic",
+  "main": "index.js",
+  "author": "ThangPham",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^4.1.3"
+  },
+  "devDependencies": {
+    "lerna": "^3.0.4"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "angular-fragment",
+  "version": "1.0.0",
+  "description": "sample frangment using angular6",
+  "main": "main.ts",
+  "author": "ThangPham",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack -p"
+  },
+  "dependencies": {
+    "@angular/common": "^6.1.2",
+    "@angular/compiler": "^6.1.2",
+    "@angular/core": "^6.1.2",
+    "@angular/elements": "^6.1.2",
+    "@angular/platform-browser": "^6.1.2",
+    "@angular/platform-browser-dynamic": "^6.1.2",
+    "@webcomponents/custom-elements": "^1.2.0",
+    "core-js": "^2.5.7",
+    "rxjs": "^6.2.2",
+    "zone.js": "^0.8.26"
+  },
+  "devDependencies": {
+    "@angular/compiler-cli": "^6.1.2",
+    "@ngtools/webpack": "^6.1.3",
+    "compression-webpack-plugin": "^1.1.11",
+    "html-loader": "^0.5.5",
+    "typescript": "~2.7",
+    "uglifyjs-webpack-plugin": "^1.3.0",
+    "webpack": "^4.16.5",
+    "webpack-cli": "^3.1.0"
+  }
+}
