@@ -6,7 +6,8 @@ module.exports = {
   entry: path.join(__dirname, 'src/main.ts'),
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    publicPath: 'http://localhost:8081/dist/',
   },
   module: {
     rules: [

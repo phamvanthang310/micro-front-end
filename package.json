@@ -7,9 +7,12 @@
   "license": "MIT",
   "scripts": {
     "install": "lerna bootstrap",
-    "build": "lerna run build"
+    "build": "lerna run build",
+    "start": "node ./server.js",
+    "start-fragments": "lerna run --parallel start"
   },
   "dependencies": {
+    "@webcomponents/custom-elements": "^1.2.0",
     "bootstrap": "^4.1.3",
     "node-tailor": "^3.8.0"
   },
