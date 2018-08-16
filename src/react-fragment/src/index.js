@@ -6,7 +6,7 @@ import App from './App';
 class ReactFragment extends HTMLElement {
   connectedCallback() {
     const mountPoint = document.createElement('span');
-    this.attachShadow({mode: 'open'}).appendChild(mountPoint);
+    this.appendChild(mountPoint);
 
     ReactDOM.render(<App/>, mountPoint);
   }
