@@ -8,6 +8,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
     publicPath: 'http://localhost:8081/dist/',
+    libraryTarget: 'amd'
   },
   module: {
     rules: [
@@ -25,6 +26,11 @@ module.exports = {
   },
   resolve: {
     extensions: ['.ts', '.js']
+  },
+  externals: {
+    common: {
+      amd: 'common'
+    }
   },
   plugins: [
     new NgCompilerPlugin.AngularCompilerPlugin({

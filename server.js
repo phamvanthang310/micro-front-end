@@ -3,8 +3,14 @@
 const http = require('http');
 const path = require('path');
 const Tailor = require('node-tailor');
+const fetchTemplateFn = require('node-tailor/lib/fetch-template');
+const baseTemplateFn = () => 'base';
+
 const tailor = new Tailor({
-  templatesPath: path.join(__dirname, 'templates')
+  fetchTemplate: fetchTemplateFn(
+    path.join(__dirname, 'templates'),
+    baseTemplateFn
+  )
 });
 
 http
