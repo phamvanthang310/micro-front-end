@@ -19,4 +19,4 @@ jobs:
         - node_modules
         key: node-modules-cache-{{ checksum "package.json" }}
 
-    - run: npm run build
+    - run: npm install & npm run build
