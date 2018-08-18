@@ -12,11 +12,11 @@ jobs:
     - restore_cache:
         key: node-modules-cache-{{ checksum "package.json" }}
 
-    - run: npm install -g yarn
+    - run: npm install -g lerna
 
     - save_cache:
         paths:
         - node_modules
         key: node-modules-cache-{{ checksum "package.json" }}
 
-    - run: yarn run build
+    - run: npm run build
