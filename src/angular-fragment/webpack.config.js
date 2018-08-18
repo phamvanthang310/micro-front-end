@@ -8,6 +8,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
     publicPath: 'http://localhost:8081/dist/',
+    libraryTarget: 'amd'
   },
   module: {
     rules: [
@@ -27,8 +28,11 @@ module.exports = {
     extensions: ['.ts', '.js']
   },
   externals: {
-    common: {
-      amd: 'common'
+    webcomponent: {
+      amd: 'webcomponent'
+    },
+    bootstrap: {
+      amd: 'bootstrap'
     }
   },
   plugins: [
