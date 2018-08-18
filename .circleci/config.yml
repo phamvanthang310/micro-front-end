@@ -12,7 +12,7 @@ jobs:
     - restore_cache:
         key: node-modules-cache-{{ checksum "package.json" }}
 
-    - run: npm install -g lerna
+    - run: sudo npm install -g lerna
 
     - save_cache:
         paths:
