@@ -1,18 +1,21 @@
 import { NgModule, Injector } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { createCustomElement } from '@angular/elements';
-import { HeaderComponent } from './components/header.component';
+
+import { components } from './components';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   imports: [BrowserModule],
-  declarations: [HeaderComponent],
-  entryComponents: [HeaderComponent]
+  declarations: components,
+  entryComponents: components
 })
 export class AngularFragmentModule {
   constructor(private injector: Injector) {
-    const header = createCustomElement(HeaderComponent, { injector });
+    const header = createCustomElement(HeaderComponent, {injector});
     customElements.define('angular-header', header);
   }
 
-  ngDoBootstrap() {}
+  ngDoBootstrap() {
+  }
 }

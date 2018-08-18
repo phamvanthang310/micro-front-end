@@ -6,7 +6,8 @@
   "author": "ThangPham",
   "license": "MIT",
   "scripts": {
-    "build": "webpack -p"
+    "build": "webpack -p",
+    "start": "node ./server.js"
   },
   "dependencies": {
     "@angular/common": "^6.1.2",
@@ -15,7 +16,6 @@
     "@angular/elements": "^6.1.2",
     "@angular/platform-browser": "^6.1.2",
     "@angular/platform-browser-dynamic": "^6.1.2",
-    "@webcomponents/custom-elements": "^1.2.0",
     "core-js": "^2.5.7",
     "rxjs": "^6.2.2",
     "zone.js": "^0.8.26"
