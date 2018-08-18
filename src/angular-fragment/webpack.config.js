@@ -1,13 +1,13 @@
 const path = require('path');
 const NgCompilerPlugin = require('@ngtools/webpack');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-const CompressionPlugin = require('compression-webpack-plugin');
 
 module.exports = {
-  entry: path.join(__dirname, 'main.ts'),
+  entry: path.join(__dirname, 'src/main.ts'),
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    publicPath: 'http://localhost:8081/dist/',
   },
   module: {
     rules: [
@@ -28,11 +28,10 @@ module.exports = {
   },
   plugins: [
     new NgCompilerPlugin.AngularCompilerPlugin({
-      tsConfigPath: './tsconfig.json',
-      mainPath: './main.ts'
+      tsConfigPath: path.join(__dirname, 'tsconfig.json'),
+      mainPath: path.join(__dirname, 'src/main.ts')
     }),
     new UglifyJsPlugin(),
-    new CompressionPlugin(),
   ],
   mode: 'production',
 };
