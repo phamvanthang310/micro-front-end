@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "install": "lerna bootstrap",
-    "build": "lerna run build",
+    "build": "lerna run --parallel build",
     "start": "node ./server.js",
     "start-fragments": "lerna run --parallel start"
   },

@@ -24,8 +24,8 @@ module.exports = {
     ]
   },
   externals: {
-    webcomponent: {
-      amd: 'webcomponent'
+    common: {
+      amd: 'common'
     }
   },
   plugins: [

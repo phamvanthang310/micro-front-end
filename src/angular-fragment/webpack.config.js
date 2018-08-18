@@ -28,11 +28,8 @@ module.exports = {
     extensions: ['.ts', '.js']
   },
   externals: {
-    webcomponent: {
-      amd: 'webcomponent'
-    },
-    bootstrap: {
-      amd: 'bootstrap'
+    common: {
+      amd: 'common'
     }
   },
   plugins: [
