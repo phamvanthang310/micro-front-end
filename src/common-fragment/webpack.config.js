@@ -6,6 +6,8 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
+    library: 'common',
+    libraryTarget: 'umd'
   },
   module: {
     rules: [
@@ -21,11 +23,6 @@ module.exports = {
         use: ['style-loader', 'css-loader'],
       }
     ]
-  },
-  externals: {
-    common: {
-      amd: 'common'
-    }
   },
   plugins: [
     new UglifyJsPlugin(),

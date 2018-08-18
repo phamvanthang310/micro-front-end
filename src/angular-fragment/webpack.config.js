@@ -26,6 +26,11 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '.js']
   },
+  externals: {
+    common: {
+      amd: 'common'
+    }
+  },
   plugins: [
     new NgCompilerPlugin.AngularCompilerPlugin({
       tsConfigPath: path.join(__dirname, 'tsconfig.json'),

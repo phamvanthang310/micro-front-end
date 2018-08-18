@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import '@webcomponents/custom-elements/src/native-shim';
 
 import './index.css';
 import App from './App';
+import webcomponent from 'common';
 
 class ReactFragment extends HTMLElement {
   connectedCallback() {
