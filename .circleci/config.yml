@@ -1,0 +1,23 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/micro-front-end
+
+    docker:
+    - image: circleci/node:7.10
+
+    steps:
+    - checkout
+
+    - restore_cache:
+        key: node-modules-cache-{{ checksum "package.json" }}
+
+    - run: sudo npm install -g lerna
+
+    - save_cache:
+        paths:
+        - node_modules
+        key: node-modules-cache-{{ checksum "package.json" }}
+
+    - run: npm install
+    - run: npm run build
