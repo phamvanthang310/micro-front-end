@@ -8,6 +8,7 @@ http.createServer((req, res) => {
   const pathname = url.parse(req.url).pathname;
   const jsHeader = { 'Content-Type': 'application/javascript' };
 
+  console.log(pathname);
   switch (pathname) {
     case '/dist/bundle.js':
       res.writeHead(200, jsHeader);
@@ -15,7 +16,7 @@ http.createServer((req, res) => {
     default:
       res.writeHead(200, {
         'Content-Type': 'text/html',
-        'Link': '<http://localhost:8082/dist/bundle.js>; rel="fragment-script"'
+        'Link': '</react-fragment/dist/bundle.js>; rel="fragment-script"'
       });
       return res.end('')
   }

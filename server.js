@@ -22,7 +22,9 @@ http
     }
     req.headers['x-request-uri'] = url;
 
-    req.url = '/index';
+    console.log(req.url);
+
+    // req.url = '/index';
 
     // TODO: multiple template layout
     // switch (url) {
