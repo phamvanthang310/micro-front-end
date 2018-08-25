@@ -27,8 +27,7 @@ Start skipper:
 ```bash
 skipper -routes-file main.eskip
 ```
-
-By default, skipper is listening on port 9090. 
+Use `-address` to specify a network address that skipper should listen on. Default is `:9090`. 
 To check if the skipper works properly or not: 
 ```bash
 curl localhost:9090/hello
