@@ -9,7 +9,7 @@
     "install": "lerna bootstrap",
     "build": "lerna run --parallel build",
     "start": "node ./server.js",
-    "start-fragments": "lerna run --parallel start"
+    "start:fragments": "lerna run --parallel start"
   },
   "dependencies": {
     "@webcomponents/custom-elements": "^1.2.0",

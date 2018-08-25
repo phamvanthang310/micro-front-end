@@ -1,0 +1,23 @@
+hello:
+   Path("/hello")
+   -> "https://www.example.org";
+
+angularFragment:
+   PathSubtree("/angular-fragment")
+   -> modPath("/angular-fragment","")
+   -> "http://localhost:8081";
+
+reactFragment:
+   PathSubtree("/react-fragment")
+   -> modPath("/react-fragment","")
+   -> "http://localhost:8082";
+
+commonFragment:
+   PathSubtree("/common")
+   -> modPath("/common","")
+   -> "http://localhost:8083";
+
+index:
+   *
+   -> setPath("index")
+   -> "http://localhost:8080";
