@@ -24,9 +24,8 @@ module.exports = {
     ]
   },
   externals: {
-    common: {
-      amd: 'common'
-    }
+    webcomponent: 'webcomponent',
+    bootstrap: 'bootstrap'
   },
   plugins: [
     new UglifyJsPlugin(),

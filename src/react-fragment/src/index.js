@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom';
 
 import './index.css';
 import App from './App';
-import common from 'common';
+import webcomponent from 'webcomponent';
+import bootstrap from 'bootstrap';
 
 class ReactFragment extends HTMLElement {
   connectedCallback() {
