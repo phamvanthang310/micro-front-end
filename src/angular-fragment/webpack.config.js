@@ -29,7 +29,7 @@ module.exports = {
   },
   externals: {
     common: {
-      amd: 'common'
+      amd: '/common/dist/bundle'
     }
   },
   plugins: [
