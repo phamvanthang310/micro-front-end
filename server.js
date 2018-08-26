@@ -5,12 +5,16 @@ const path = require('path');
 const Tailor = require('node-tailor');
 const fetchTemplateFn = require('node-tailor/lib/fetch-template');
 const baseTemplateFn = () => 'base';
+const filterHeader = require('node-tailor/lib/filter-headers');
+const requestFragment = require('./utils/request-fragment');
+const skipperAddress = process.env.SKIPPER_ADDRESS;
 
 const tailor = new Tailor({
   fetchTemplate: fetchTemplateFn(
     path.join(__dirname, 'templates'),
     baseTemplateFn
-  )
+  ),
+  requestFragment: requestFragment(filterHeader, skipperAddress)
 });
 
 http
@@ -23,23 +27,10 @@ http
     req.headers['x-request-uri'] = url;
 
     console.log(req.url);
-
-    // req.url = '/index';
-
-    // TODO: multiple template layout
-    // switch (url) {
-    //   case '/angular-fragment':
-    //     req.url = '/angular-fragment';
-    //     break;
-    //   case '/react-fragment':
-    //     req.url = '/react-fragment';
-    //     break;
-    //   default:
-    //     req.url = '/index';
-    // }
-
     tailor.requestHandler(req, res)
   })
   .listen(8080, function () {
     console.log('Tailor server listening on port 8080')
+    if(skipperAddress)
+      console.log(`Tailor parses fragment with skipper address: ${skipperAddress}`);
   });

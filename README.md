@@ -23,7 +23,24 @@ Get skipper packages:
 go get github.com/zalando/skipper/...
 ```
 
-Start skipper:
+### Source
+This project is leverage from [lerna](https://github.com/lerna/lerna) library for multi package managements.
+We can use npm/yarn for script running:
+
+Install dependencies:
+```bash
+yarn install
+```
+
+Build all fragments:
+```bash
+yarn run build
+```
+The `bundle.js` file located at `/dist`
+
+## Run
+
+### Start skipper
 ```bash
 skipper -routes-file main.eskip
 ```
@@ -34,23 +51,14 @@ curl localhost:9090/hello
 ```
 It will result in [www.example.org](https://www.example.org) page
 
-### Source
-This project is leverage from [lerna](https://github.com/lerna/lerna) library for multi package managements.
-We can use npm/yarn for script running:
 
-Install dependencies:
+### Start Tailor server 
+Specify the `SKIPPER_ADDRESS` value match with skipper address
 ```bash
-yarn install
+SKIPPER_ADDRESS=localhost:9090 yarn run start
 ```
 
-## Run
-
-Start server 
-```bash
-yarn run start
-```
-
-Start all Fragment
+### Start all Fragment
 ```bash
 yarn run start:fragments
 ```
