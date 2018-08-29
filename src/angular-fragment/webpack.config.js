@@ -28,9 +28,8 @@ module.exports = {
     extensions: ['.ts', '.js']
   },
   externals: {
-    common: {
-      amd: 'common'
-    }
+    webcomponent: 'webcomponent',
+    bootstrap: 'bootstrap'
   },
   plugins: [
     new NgCompilerPlugin.AngularCompilerPlugin({
