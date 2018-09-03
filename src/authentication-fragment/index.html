@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Authentication Fragment Test Page</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+    <script>
+      (function (d) {
+        require(d);
+        var arr = ['webcomponent', 'bootstrap', 'fireBase', 'FireBaseUI'];
+        while (i = arr.pop()) (function (dep) {
+          define(dep, d, function (b) {
+            return b[dep];
+          })
+        })(i);
+      }(['../common-fragment/dist/bundle.js']));
+    </script>
+    <script src="./dist/bundle.js"></script>
+    <script src="../common-fragment/dist/bundle.js"></script>
+</head>
+
+<body>
+<authentication-fragment></authentication-fragment>
+</body>
+
+</html>
