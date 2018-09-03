@@ -17,6 +17,15 @@ commonFragment:
    -> modPath("/common","")
    -> "http://localhost:8083";
 
+authenticationFragment:
+   PathSubtree("/authentication-fragment")
+   -> modPath("/authentication-fragment","")
+   -> "http://localhost:8084";
+
+auth:
+   Path("/auth")
+   -> "http://localhost:8080";
+
 index:
    *
    -> setPath("index")

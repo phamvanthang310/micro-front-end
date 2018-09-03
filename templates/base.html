@@ -7,9 +7,11 @@
     <script>
       (function (d) {
         require(d);
-        var arr = ['webcomponent', 'bootstrap'];
+        console.log(d);
+        var arr = ['webcomponent', 'bootstrap', 'fireBase', 'FireBaseUI'];
         while (i = arr.pop()) (function (dep) {
           define(dep, d, function (b) {
+            console.log(b);
             return b[dep];
           })
         })(i);

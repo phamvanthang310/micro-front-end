@@ -8,10 +8,7 @@ import bootstrap from 'bootstrap';
 
 class ReactFragment extends HTMLElement {
   connectedCallback() {
-    const mountPoint = document.createElement('span');
-    this.appendChild(mountPoint);
-
-    ReactDOM.render(<App/>, mountPoint);
+    ReactDOM.render(<App/>, this);
   }
 }
 
