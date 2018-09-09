@@ -20,6 +20,7 @@ module.exports = {
       },
       {
         test: /\.ts$/,
+        exclude: /node_modules/,
         use: {
           loader: 'awesome-typescript-loader'
         }
@@ -29,6 +30,9 @@ module.exports = {
         use: ['style-loader', 'css-loader'],
       }
     ]
+  },
+  resolve: {
+    extensions: ['.ts', '.js']
   },
   plugins: [
     new UglifyJsPlugin(),
