@@ -1,6 +1,6 @@
 import config from './firebase-config';
 import 'firebase/auth';
-import BaseAuthentication from "./base-authentication";
+import BaseAuthentication from './base-authentication';
 
 const firebase = require('firebase/app');
 
@@ -25,6 +25,9 @@ export class MyFirebase implements BaseAuthentication {
   }
 
   logout() {
+  }
+
+  signUp(userData) {
   }
 
   get auth() {

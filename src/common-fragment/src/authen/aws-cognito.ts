@@ -27,11 +27,12 @@ export class AwsCognito implements BaseAuthentication {
     this._userPool = new CognitoUserPool(this._poolData);
   }
 
-  getCurrentUser() {
-    const currentUser = this._userPool.getCurrentUser();
-    currentUser.getSession((err, session) => {
-
-    });
+  getCurrentUser(): CognitoUser {
+    // const currentUser = this._userPool.getCurrentUser();
+    // currentUser.getSession((err, session) => {
+    //
+    // });
+    return this._userPool.getCurrentUser();
   }
 
   getInstance() {
@@ -42,5 +43,12 @@ export class AwsCognito implements BaseAuthentication {
   }
 
   logout() {
+  }
+
+  signUp(userData) {
+    const {username, password} = userData;
+    this._userPool.signUp('', '', [], [], (error, cognitoUser) => {
+      if (error) console.error(error);
+    });
   }
 }

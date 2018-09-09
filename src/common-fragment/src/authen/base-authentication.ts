@@ -3,6 +3,8 @@ export default interface BaseAuthentication {
 
   logout();
 
+  signUp(userData: any);
+
   getInstance();
 
   getCurrentUser();
