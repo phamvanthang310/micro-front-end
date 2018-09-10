@@ -1,5 +1,5 @@
 export default interface BaseAuthentication {
-  login();
+  login(credential: { username: string, password: string });
 
   logout();
 

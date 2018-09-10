@@ -25,7 +25,8 @@ module.exports = {
   },
   externals: {
     fireBase: 'fireBase',
-    FireBaseUI: 'FireBaseUI'
+    FireBaseUI: 'FireBaseUI',
+    awsCognito: 'awsCognito'
   },
   plugins: [
     new UglifyJsPlugin(),

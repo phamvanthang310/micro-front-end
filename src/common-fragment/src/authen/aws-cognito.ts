@@ -5,50 +5,52 @@ import {
   ICognitoUserData,
   ICognitoUserPoolData
 } from 'amazon-cognito-identity-js';
-import config from './aws-cognito-config';
+import { config } from './aws-cognito-config';
 import BaseAuthentication from './base-authentication';
+import Auth from '@aws-amplify/auth';
 
 export class AwsCognito implements BaseAuthentication {
-  _poolData: ICognitoUserPoolData;
-  _userPool: CognitoUserPool;
-  _userData: ICognitoUserData;
-
   constructor() {
-    this._userData = {
-      Username: '',
-      Pool: this._userPool,
-    };
-
-    this._poolData = {
-      UserPoolId: config.userPoolId,
-      ClientId: config.clientId,
-    };
-
-    this._userPool = new CognitoUserPool(this._poolData);
+    Auth.configure(config);
   }
 
-  getCurrentUser(): CognitoUser {
+  getCurrentUser(): any {
     // const currentUser = this._userPool.getCurrentUser();
     // currentUser.getSession((err, session) => {
     //
     // });
-    return this._userPool.getCurrentUser();
+    // return this._userPool.getCurrentUser();
+    Auth.currentAuthenticatedUser()
+      .then(user => console.log(user))
+      .catch(err => console.log(err));
   }
 
   getInstance() {
-    return this._userPool;
   }
 
-  login() {
+  login({username, password}) {
+    Auth.signIn(username, password)
+      .then(user => console.log(user))
+      .catch(error => console.error(error));
   }
 
   logout() {
+    Auth.signOut()
+      .then(data => console.log(data))
+      .catch(err => console.log(err));
   }
 
   signUp(userData) {
-    const {username, password} = userData;
-    this._userPool.signUp('', '', [], [], (error, cognitoUser) => {
-      if (error) console.error(error);
-    });
+    const {username, password, email} = userData;
+    Auth.signUp({
+      username,
+      password,
+      attributes: {
+        email
+      },
+      validationData: []  //optional
+    })
+      .then(data => console.log(data))
+      .catch(err => console.log(err));
   }
 }

@@ -21,7 +21,7 @@ export class MyFirebase implements BaseAuthentication {
 
   }
 
-  login() {
+  login({username, password}) {
   }
 
   logout() {
