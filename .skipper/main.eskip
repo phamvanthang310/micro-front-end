@@ -17,7 +17,18 @@ commonFragment:
    -> modPath("/common","")
    -> "http://localhost:8083";
 
-index:
-   *
-   -> setPath("index")
+productFragment:
+  PathSubtree("/product-fragment")
+  -> modPath("/product-fragment","")
+  -> "http://localhost:8084";
+
+paymentFragment:
+  PathSubtree("/payment-fragment")
+  -> modPath("/payment-fragment","")
+  -> "http://localhost:8085";
+
+template:
+   PathSubtree("/product")
+   -> setPath("/product")
    -> "http://localhost:8080";
+

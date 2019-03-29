@@ -14,7 +14,8 @@ const tailor = new Tailor({
     path.join(__dirname, 'templates'),
     baseTemplateFn
   ),
-  requestFragment: requestFragment(filterHeader, skipperAddress)
+  requestFragment: requestFragment(filterHeader, skipperAddress),
+  maxAssetLinks: 5
 });
 
 http
@@ -27,10 +28,11 @@ http
     req.headers['x-request-uri'] = url;
 
     console.log(req.url);
+
     tailor.requestHandler(req, res)
   })
   .listen(8080, function () {
-    console.log('Tailor server listening on port 8080')
+    console.log('Tailor server listening on port 8080');
     if(skipperAddress)
       console.log(`Tailor parses fragment with skipper address: ${skipperAddress}`);
   });
