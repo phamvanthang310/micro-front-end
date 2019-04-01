@@ -1,9 +1,10 @@
 {
-  "name": "react-fragment",
+  "name": "payment-fragment",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "start": "node ./server.js",
+    "serve": "webpack-dev-server",
     "build": "webpack -p",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"

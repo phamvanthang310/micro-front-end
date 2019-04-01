@@ -7,11 +7,6 @@ angularFragment:
    -> modPath("/angular-fragment","")
    -> "http://localhost:8081";
 
-reactFragment:
-   PathSubtree("/react-fragment")
-   -> modPath("/react-fragment","")
-   -> "http://localhost:8082";
-
 commonFragment:
    PathSubtree("/common")
    -> modPath("/common","")
@@ -25,10 +20,14 @@ productFragment:
 paymentFragment:
   PathSubtree("/payment-fragment")
   -> modPath("/payment-fragment","")
-  -> "http://localhost:8085";
+  -> "http://localhost:8082";
 
-template:
+productTemplate:
    PathSubtree("/product")
    -> setPath("/product")
    -> "http://localhost:8080";
 
+paymentTemplate:
+   PathSubtree("/payment")
+   -> setPath("/payment")
+   -> "http://localhost:8080";

@@ -1,4 +1,4 @@
 'use strict';
 
 const fragmentServer = require('../../utils/fragmentServer');
-fragmentServer('react-fragment', 8082);
+fragmentServer('payment-fragment', 8082);

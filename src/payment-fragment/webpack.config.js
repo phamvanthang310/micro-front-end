@@ -25,9 +25,12 @@ module.exports = {
   },
   externals: {
     webcomponent: 'webcomponent',
-    bootstrap: 'bootstrap'
+    bootstrap: 'bootstrap',
+    mdl: 'mdl',
+    'mdl-script': 'mdl-script'
   },
   plugins: [
     new UglifyJsPlugin(),
   ],
-};
+}
+;

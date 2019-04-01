@@ -8,8 +8,6 @@ import * as components from './component';
 @NgModule({
   declarations: [
     AppComponent,
-    components.ShoppingCartComponent,
-    components.AddToCartComponent,
     components.HeaderComponent,
     components.ProductListComponent,
     components.ProductDetailsComponent,

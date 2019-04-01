@@ -6,7 +6,6 @@ import { environment } from './environments/environment';
 import 'webcomponent';
 import 'bootstrap';
 import 'mdl';
-import 'mdl-script';
 import 'zone.js';
 
 if (environment.production) {
