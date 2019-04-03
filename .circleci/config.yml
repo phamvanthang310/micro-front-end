@@ -4,7 +4,7 @@ jobs:
     working_directory: ~/micro-front-end
 
     docker:
-    - image: circleci/node:7.10
+    - image: circleci/node:11.13
 
     steps:
     - checkout
