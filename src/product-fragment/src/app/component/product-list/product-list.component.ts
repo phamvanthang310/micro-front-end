@@ -22,7 +22,7 @@ export class ProductListComponent implements OnInit {
           large: 'https://covers.openlibrary.org/b/id/8081272-L.jpg'
         },
         identifiers: {
-          isbn_13: 9780439064873
+          isbn_13: '9780439064873'
         }
       },
       {
@@ -36,7 +36,7 @@ export class ProductListComponent implements OnInit {
           large: 'https://covers.openlibrary.org/b/id/8085499-L.jpg'
         },
         identifiers: {
-          isbn_13: 9780132350884
+          isbn_13: '9780132350884'
         }
       },
       {
@@ -50,7 +50,7 @@ export class ProductListComponent implements OnInit {
           large: 'https://covers.openlibrary.org/b/id/8081272-L.jpg'
         },
         identifiers: {
-          isbn_13: 9780439064873
+          isbn_13: '9780439064873'
         }
       },
       {
@@ -64,7 +64,7 @@ export class ProductListComponent implements OnInit {
           large: 'https://covers.openlibrary.org/b/id/8081272-L.jpg'
         },
         identifiers: {
-          isbn_13: 9780439064873
+          isbn_13: '9780439064873'
         }
       },
       {
@@ -78,7 +78,7 @@ export class ProductListComponent implements OnInit {
           large: 'https://covers.openlibrary.org/b/id/8081272-L.jpg'
         },
         identifiers: {
-          isbn_13: 9780439064873
+          isbn_13: '9780439064873'
         }
       },
       {
@@ -92,7 +92,7 @@ export class ProductListComponent implements OnInit {
           large: 'https://covers.openlibrary.org/b/id/8081272-L.jpg'
         },
         identifiers: {
-          isbn_13: 9780439064873
+          isbn_13: '9780439064873'
         }
       }
     ]

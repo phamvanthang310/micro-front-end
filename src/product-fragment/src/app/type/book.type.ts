@@ -5,7 +5,8 @@ export class Book {
     name: string
   };
   identifiers: {
-    isbn_13: number
+    isbn_10?: number;
+    isbn_13: string;
   }
 }
 
